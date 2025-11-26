@@ -1,8 +1,10 @@
-export default function BlogPostPage({ params }) {
+export default async function BlogPostPage({ params }) {
+  const currentParams = await params;
+
   return (
     <main>
       <h1>Blog Post</h1>
-      <p>{params.slug}</p>
+      <p>{currentParams.slug}</p>
     </main>
   );
 }
